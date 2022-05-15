@@ -1,0 +1,23 @@
+.header-burger-toggle {
+    cursor: pointer;
+    width: 24px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: none;
+    transition: color 300ms ease;
+    color: $c-black;
+
+    &:hover {
+        color: $c-secondary;
+    }
+
+    > span {
+        display: block;
+        height: 2px;
+        margin: 4px 0;
+        background-color: currentColor;
+    }
+}

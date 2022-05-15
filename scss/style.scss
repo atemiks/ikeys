@@ -1,0 +1,97 @@
+@import 'vars';
+
+// vendors
+@import '../vendor/bootstrap-4.6.0/scss/bootstrap';
+@import '../vendor/select2/dist/css/select2.min.css';
+@import '../vendor/jquery-ui-1.12.1.custom/jquery-ui.min.css';
+@import '../vendor/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css';
+@import '../vendor/swiper/swiper.css';
+@import '../vendor/fancybox/fancybox.jquery.min.css';
+
+// general
+@import 'fonts';
+@import 'typography';
+
+// components
+@import 'components/search';
+@import 'components/lists';
+@import 'components/contact';
+@import 'components/breadcrumb';
+@import 'components/pagination';
+@import 'components/nav';
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/filter';
+@import 'components/badge';
+@import 'components/rating';
+@import 'components/tooltip';
+@import 'components/select2';
+@import 'components/table';
+@import 'components/swiper';
+@import 'components/offcanvas';
+@import 'components/megamenu';
+@import 'components/cdek';
+@import 'components/modal';
+
+// header
+@import 'layout/header/header';
+
+// cards
+@import 'components/cards/card';
+@import 'components/cards/card-product';
+@import 'components/cards/card-compare';
+@import 'components/cards/card-intro';
+@import 'components/cards/card-subcategory';
+@import 'components/cards/card-video';
+@import 'components/cards/card-service';
+@import 'components/cards/card-service-related';
+@import 'components/cards/card-partner';
+@import 'components/cards/card-price';
+@import 'components/cards/card-faq';
+@import 'components/cards/card-post';
+@import 'components/cards/card-banner';
+@import 'components/cards/card-review';
+@import 'components/cards/card-expert';
+@import 'components/cards/card-document';
+@import 'components/cards/card-order';
+
+
+// sections
+@import 'sections/section-intro';
+@import 'sections/section-display';
+@import 'sections/section-services';
+@import 'sections/section-services-related';
+@import 'sections/section-service';
+@import 'sections/section-smartphone';
+@import 'sections/section-about';
+@import 'sections/section-partners';
+@import 'sections/section-steps';
+@import 'sections/section-prices';
+@import 'sections/section-faq';
+@import 'sections/section-cases';
+@import 'sections/section-products';
+@import 'sections/section-reviews';
+@import 'sections/section-posts';
+@import 'sections/section-content';
+@import 'sections/section-article';
+@import 'sections/section-404';
+
+
+// catalog
+@import 'layout/catalog/catalog';
+
+// product
+@import 'layout/product/product';
+
+// cart
+@import 'layout/cart/cart';
+
+// compare
+@import 'layout/compare/compare';
+
+// search
+@import 'layout/search/search';
+
+// footer
+@import 'layout/footer/footer';
+

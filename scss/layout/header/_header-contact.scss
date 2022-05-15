@@ -1,0 +1,29 @@
+.header-contact-list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header-contact {
+    font-size: 14px;
+    font-weight: 600;
+    
+    &[href^="tel:"]  {
+        color: $c-primary;
+        font-size: 15px;
+        font-weight: 700;
+        @include media-breakpoint-up(xxl) {
+            font-size: 17px;
+        }
+
+        &:hover {
+            color: $c-secondary;
+        }
+    }
+
+    &[href^="mailto:"] {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

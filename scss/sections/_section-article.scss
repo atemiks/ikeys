@@ -1,0 +1,153 @@
+.section-article {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    @include media-breakpoint-up(lg) {
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+    @include media-breakpoint-up(xxl) {
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+
+
+    h2, h3, h4, h5, h6 {
+        margin-top: 35px;
+        margin-bottom: 20px;
+        font-family: $f-secondary;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: normal;
+        @include media-breakpoint-up(md) {
+            margin-top: 50px;
+        }
+        @include media-breakpoint-up(xxl) {
+            margin-top: 85px;
+        }
+    }
+
+    @for $i from 1 through 5 {
+        $h-max-size: 40px;
+
+        h#{$i} {
+            font-size: #{$h-max-size - ($i * 5px)};
+
+            @include media-breakpoint-up(lg) {
+                font-size: #{$h-max-size - ($i * 2px)};
+            }
+        }
+    }
+
+
+
+    p {
+        line-height: 1.4;
+        @include media-breakpoint-up(xl) {
+            line-height: 35px;
+        }
+    }
+
+    q, 
+    quotes {
+        display: block;
+        background: $c-secondary;
+        padding: 5px 10px;
+        color: $c-white;
+    }
+
+    blockquote {
+        padding: 15px 10px;
+        border: 10px solid $c-dark;
+        background: $c-secondary;
+        color: $c-white;
+        font-size: 17px;
+        line-height: 1.333;
+        @include media-breakpoint-up(lg) {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 20px;
+        }
+        @include media-breakpoint-up(xl) {
+            padding: 25px 35px;
+            font-size: 24px;
+        }
+        @include media-breakpoint-up(xxl) {
+            padding: 55px 50px;
+            border-width: 20px;
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+
+    ul {
+        @extend .list-dash;
+        padding: 0;
+        list-style: none;
+    }
+
+    ol {
+        padding: 0;
+        list-style: none;
+        counter-reset: item;
+        @include media-breakpoint-up(xl) {
+            padding-left: 15px;
+        }
+
+        > li {
+            position: relative;
+            margin-bottom: 15px;
+            padding: 0 0 0 35px;
+            counter-increment: item;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: $c-secondary;
+                font-weight: bold;
+                content: counter(item) ')';
+            }
+        }
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+
+        @include media-breakpoint-up(lg) {
+            display: inline;
+        }
+
+        &[align="left"],
+        &[align="right"] {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            @include media-breakpoint-up(md) {
+                max-width: 50%;
+            }
+            @include media-breakpoint-up(xxl) {
+                max-width: 100%;
+            }
+        }
+
+        &[align="left"] {
+            @include media-breakpoint-up(md) {
+                margin-right: 15px;
+            }
+            @include media-breakpoint-up(xxl) {
+                margin-right: 40px;
+            }
+        }
+
+        &[align="right"] {
+            @include media-breakpoint-up(md) {
+                margin-left: 15px;
+            }
+            @include media-breakpoint-up(xxl) {
+                margin-left: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.header-location-toggle {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: none;
+    transition: color 300ms ease;
+    color: $c-primary;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+
+    &:hover {
+        color: $c-secondary;
+    }
+
+    .header-location-thumbnail {
+        width: 27px;
+        height: 16px;
+        margin-right: 15px;
+    }
+}

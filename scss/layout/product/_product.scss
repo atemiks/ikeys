@@ -1,0 +1,57 @@
+.product-page {
+    .main-box {
+        > section {
+            &:last-child {
+                @include media-breakpoint-up(xl) {
+                    margin-bottom: 85px;
+                }
+                @include media-breakpoint-up(xxl) {
+                    margin-bottom: 135px;
+                }
+            }
+
+            &:only-child {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}
+
+.section-product {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 80px;
+    line-height: 20px;
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 70px;
+    }
+    @include media-breakpoint-up(md) {
+        margin-bottom: 75px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 60px;
+    }
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 95px;
+    }
+    @include media-breakpoint-up(xxl) {
+        padding-bottom: 25px;
+        line-height: 25px;
+    }
+}
+
+@import 'product-intro';
+@import 'product-display';
+@import 'product-gallery';
+@import 'product-details';
+@import 'product-color';
+@import 'product-scheme';
+@import 'product-whatsapp';
+@import 'product-order';
+@import 'product-include';
+@import 'product-delivery';
+@import 'product-attributes';
+@import 'product-expert';
+@import 'product-specifications';
+@import 'product-documents';
+@import 'product-services';

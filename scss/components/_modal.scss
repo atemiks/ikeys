@@ -1,0 +1,178 @@
+.modal {
+    font-size: 14px;
+    line-height: 20px;
+    @include media-breakpoint-up(xl) {
+        font-size: 17px;
+        line-height: 25px;
+    }
+    @include media-breakpoint-up(xxl) {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.modal-dialog {
+    @include media-breakpoint-up(sm) {
+        max-width: 430px;
+    }
+    @include media-breakpoint-up(md) {
+        max-width: 500px;
+    }
+    @include media-breakpoint-up(xl) {
+        max-width: 585px;
+    }
+    @include media-breakpoint-up(xxl) {
+        max-width: 685px;
+    }
+}
+
+.modal-content {
+    padding: 20px 20px 30px;
+    border: none;
+    border-radius: 0;
+    @include media-breakpoint-up(md) {
+        padding: 30px 30px 40px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding: 40px 40px 50px;
+    }
+    @include media-breakpoint-up(xxl) {
+        padding: 45px 50px 55px;
+    }
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    padding: 0;
+    border: none;
+}
+
+.modal-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+        transform: translateY(-50%);
+        color: currentColor;
+
+        &:hover {
+            color: $c-secondary;
+        }
+    }
+}
+
+.modal-footer {
+    margin-top: 20px;
+    display: block;
+
+    > .row {
+        @extend .row;
+    }
+
+    > .form-row {
+        @extend .form-row;
+    }
+}
+
+.modal-thumbnail {
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 100%;
+    border: none;
+
+    .modal-media {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.modal-title {
+    margin-right: 35px;
+}
+
+.modal-subtitle {
+    margin: 10px 0 0;
+}
+
+.form-modal {
+    .form-group {
+        + .form-group {
+            @include media-breakpoint-up(xl) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .form-label {
+        margin: 0;
+        @include media-breakpoint-up(xl) {
+            font-size: 15px;
+        }
+    }
+
+    button[type="submit"] {
+        margin-top: 10px;
+        @include media-breakpoint-up(xl) {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+.modal-controls-group {
+    margin-bottom: -15px;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+    }
+
+    .modal-control {
+        width: 100%;
+        margin-bottom: 15px;
+
+        @include media-breakpoint-up(md) {
+            width: auto;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// modal location
+#modalLocation {
+    .modal-dialog {
+        @include media-breakpoint-up(md) {
+            max-width: 400px;
+        }
+    }
+
+    .modal-header {
+        @include media-breakpoint-up(xxl) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// modal add to cart
+#modalAddToCardProductName {
+    border: none;
+    @include media-breakpoint-up(xxl) {
+        margin: 5px 0;
+        font-size: 22px;
+    }
+}

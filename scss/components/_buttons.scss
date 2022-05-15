@@ -1,0 +1,96 @@
+.btn {
+    cursor: pointer;
+    position: relative;
+    min-width: 70px;
+    margin: 0;
+    padding: 15px;
+    border: none;
+    border-radius: 0;
+    background: $c-secondary;
+    transition: background 300ms ease;
+    color: $c-white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    @include media-breakpoint-up(xxl) {
+        min-width: 150px;
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    &::after {
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: $c-black;
+        content: '';
+    }
+
+    &-media {
+        margin-right: 5px;
+        fill: currentColor;
+    }
+
+
+    &:hover {
+        background: lighten($c-secondary, 5%);
+        color: $c-white;
+    }
+
+    &.active {
+        background-color: $c-default;
+    }
+}
+
+.btn-lg {
+    @include media-breakpoint-up(sm) {
+        padding: 12px 15px;
+    }
+    @include media-breakpoint-up(md) {
+        padding: 14px 20px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 17px 25px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding: 22px 25px;
+        font-size: 20px;
+    }
+    @include media-breakpoint-up(xxl) {
+        padding: 22px 35px;
+        font-size: 20px;
+    }
+}
+
+.btn-secondary {
+    background-color: $c-default;
+}
+
+.btn-link {
+    margin: 0;
+    padding: 0;
+    border-bottom: 3px solid $c-secondary;
+    background: none;
+    color: currentColor;
+    text-decoration: none;
+
+    &::before,
+    &::after {
+        display: none;
+    }
+
+    &:hover {
+        border-bottom-color: transparent;
+        color: currentColor;
+        text-decoration: none;
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        text-decoration: none;
+    }
+}

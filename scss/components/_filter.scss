@@ -1,0 +1,317 @@
+.filter-toggle {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 0;
+    background: $c-secondary;
+    color: $c-white;
+    font-size: 16px;
+    font-weight: 700;
+
+    &.active {
+        background: $c-secondary;
+    }
+
+    .filter-toggle-media {
+        margin-right: 5px;
+    }
+}
+
+.filter-block {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    overflow-y: auto;
+    top: 100%;
+    left: -5px;
+    right: -5px;
+    max-height: calc(100vh - 180px);
+    padding: 15px 30px 30px;
+    background-color: $c-black;
+    color: $c-white;
+    @include media-breakpoint-up(sm) {
+        left: 0;
+        right: 0;
+    }
+    @include media-breakpoint-up(md) {
+        max-height: calc(100vh - 215px);
+    }
+    @include media-breakpoint-up(lg) {
+        position: static;
+        overflow: visible;
+        display: block !important;
+        max-width: 320px;
+        max-height: none;
+        padding: 0;
+    }
+}
+
+.filter-header {
+    margin: 20px 0;
+
+    .filter-title {
+        margin: 0;
+        font-family: $f-secondary;
+    }
+}
+
+.filter-group {
+    margin-bottom: 25px;
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 55px;
+    }
+
+    .filter-group-title {
+        margin: 0 0 10px;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 25px;
+        @include media-breakpoint-up(xl) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}
+
+.filter-media {
+    margin-left: 8px;
+}
+
+.filter-category-group {
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 30px;
+    }
+}
+
+
+.filter-category-link {
+    border: none;
+    font-size: 14px;
+    @include media-breakpoint-up(md) {
+        font-size: 15px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 17px;
+    }
+
+    .filter-category-media {
+        margin-right: 15px;
+    }
+
+    .filter-category-text {
+        border-bottom: 3px solid $c-secondary;
+    }
+
+    &:hover {
+        .filter-category-text {
+            border-color: transparent;
+        }
+    }
+}
+
+// filter options
+.filter-options-list {
+    margin-top: -2px;
+    margin-bottom: -2px;
+
+    .filter-option-item {
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+}
+
+.filter-option {
+    @include media-breakpoint-up(xl) {
+        font-size: 17px;
+    }
+    
+    .filter-option-input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+
+        &:checked ~ .filter-option-label {
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: $c-white;
+            color: $c-black;
+        }
+    }
+
+    .filter-option-label {
+        position: relative;
+        margin: 0;
+        padding: 7px 0;
+        transition: background-color 300ms ease;
+
+        &:hover {
+            background-color: rgba($c-white, .2);
+        }
+    }
+
+    .filter-option-badge {
+        color: $c-secondary;
+        font-size: 14px;
+    }
+}
+
+
+// filter checkbox
+.filter-checkbox-list {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .filter-checkbox-item {
+        margin-top: 14px;
+        margin-bottom: 14px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .filter-checkbox-list {
+        margin: 14px 0 14px 20px;
+    }
+}
+
+// filter security
+.filter-security-list {
+    margin: 0 -3px;
+
+    .filter-security-input {
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        width: 22px;
+        height: 30px;
+        opacity: 0;
+
+        &:checked {
+            + .filter-security-label {
+                color: $c-white;
+                ~ .filter-security-label {
+                    color: $c-white;
+                }
+            }
+        }
+    }
+
+    .filter-security-label {
+        cursor: pointer;
+        margin: 0 3px;
+        color: rgba($c-white, .25);
+    }
+}
+
+// filter color
+.filter-color-list {
+    margin: -10px 0 0;
+}
+
+// filter sheme
+.filter-sheme-block {
+    max-width: 323px;
+
+    .filter-sheme-thumbnail {
+        position: relative;
+
+        .filter-sheme-media {
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.filter-sheme-options-block {
+    max-width: 312px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.filter-sheme-option-group {
+    position: relative;
+    padding-bottom: 10px;
+    &::before,
+    &::after {
+        position: absolute;
+        bottom: 0;
+        width: 1px;
+        height: 38px;
+        background: #4b5056;
+        content: '';
+    }
+
+    &::before {
+        left: 0;
+    }
+
+    &::after {
+        right: 0;
+    }
+
+    .filter-sheme-option-title {
+        margin: 0;
+        @include media-breakpoint-up(xl) {
+            font-size: 17px;
+        }
+    }
+
+    .select2-container  {
+        .select2-selection--single {
+            border-bottom-color: #4b5056;
+            color: $c-white;
+            font-weight: 700;
+            text-align: center;
+
+            .select2-selection__rendered {
+                display: inline-block;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            .select2-selection__arrow {
+                position: relative;
+                display: inline-block;
+                width: 10px;
+                height: 26px;
+                margin: 0;
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+// filter range
+.filter-range-slider-block {
+    margin: 20px 0 10px;
+}
+
+.filter-range-slider {
+    position: relative;
+    height: 5px;
+    margin: 8px 10px;
+    border-radius: 3px;
+    background-color: rgba($c-white, .25);
+
+    .ui-slider-range {
+        height: inherit;
+        background: currentColor;
+    }
+
+    .ui-slider-handle {
+        cursor: pointer;
+        top: 50%;
+        width: 18px;
+        height: 18px;
+        margin: 0 -9px;
+        border-radius: 50%;
+        background: currentColor;
+        transform: translateY(-50%);
+    }
+}

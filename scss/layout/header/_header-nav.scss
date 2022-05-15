@@ -1,0 +1,15 @@
+.header-nav-list {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $c-primary;
+    font-size: 14px;
+    font-weight: 600;
+
+    .header-nav-item {
+        margin: 0 15px;
+
+        &.active {
+            color: $c-secondary;
+        }
+    }
+}
